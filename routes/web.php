@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\MessageController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -10,4 +10,4 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
 
-Route::get('/reports', [TestController::class, 'index']);
+Route::get('/reports', [MessageController::class, 'index']);

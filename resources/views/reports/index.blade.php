@@ -1,6 +1,10 @@
 <x-layouts.layout>
     <x-slot:title>Reports</x-slot:title>
-    @foreach ($persons as $person)
-        <h1>{{ $person['fname'] . ' ' . $person['lname'] }}</h1>
+
+    @foreach ($messages as $message)
+        <h1>{{ $message->user ? $message->user->name : 'Unknown User' }}</h1>
+        <p>{{ $message->message }}</p>
+        <hr>
     @endforeach
+
 </x-layouts.layout>
